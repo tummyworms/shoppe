@@ -171,12 +171,12 @@ async function sbSaveImage(file: File): Promise<string> {
 /* Public interface — picks the backend automatically                  */
 /* ------------------------------------------------------------------ */
 
-export const getItems = supabaseEnabled ? sbGetItems : fileGetItems;
-export const getItem = supabaseEnabled ? sbGetItem : fileGetItemLocal;
-export const addItem = supabaseEnabled ? sbAddItem : fileAddItem;
-export const updateItem = supabaseEnabled ? sbUpdateItem : fileUpdateItem;
-export const deleteItem = supabaseEnabled ? sbDeleteItem : fileDeleteItem;
-export const saveImage = supabaseEnabled ? sbSaveImage : fileSaveImage;
+export const getItems = supabaseEnabled() ? sbGetItems : fileGetItems;
+export const getItem = supabaseEnabled() ? sbGetItem : fileGetItemLocal;
+export const addItem = supabaseEnabled() ? sbAddItem : fileAddItem;
+export const updateItem = supabaseEnabled() ? sbUpdateItem : fileUpdateItem;
+export const deleteItem = supabaseEnabled() ? sbDeleteItem : fileDeleteItem;
+export const saveImage = supabaseEnabled() ? sbSaveImage : fileSaveImage;
 
 async function fileGetItemLocal(id: string): Promise<Item | null> {
   const items = await fileGetItems();

@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { randomUUID } from "crypto";
 import { addItem, getItems, saveImage } from "@/lib/store";
+import { getEnv } from "@/lib/env";
 import type { Item } from "@/lib/types";
-
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "shoppe";
 
 export async function GET() {
   return NextResponse.json(await getItems());
@@ -12,7 +11,7 @@ export async function GET() {
 export async function POST(req: Request) {
   const form = await req.formData();
 
-  if (form.get("password") !== ADMIN_PASSWORD) {
+  if (form.get("password") !== getEnv("ADMIN_PASSWORD")) {
     return NextResponse.json({ error: "Wrong password" }, { status: 401 });
   }
 

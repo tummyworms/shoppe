@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
 import { deleteItem, updateItem } from "@/lib/store";
-
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "shoppe";
+import { getEnv } from "@/lib/env";
 
 export async function PATCH(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const body = await req.json();
-  if (body.password !== ADMIN_PASSWORD) {
+  if (body.password !== getEnv("ADMIN_PASSWORD")) {
     return NextResponse.json({ error: "Wrong password" }, { status: 401 });
   }
   const updated = await updateItem(id, {
@@ -22,7 +21,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
 export async function DELETE(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const body = await req.json().catch(() => ({}));
-  if (body.password !== ADMIN_PASSWORD) {
+  if (body.password !== getEnv("ADMIN_PASSWORD")) {
     return NextResponse.json({ error: "Wrong password" }, { status: 401 });
   }
   const ok = await deleteItem(id);

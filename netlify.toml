@@ -1,0 +1,7 @@
+# These variables are read only by server-side code (Next.js server components
+# and API routes, which run as Netlify Functions). They are never included in
+# the browser/static output. Netlify's secret scanner otherwise flags them when
+# it sees them in the server function bundle, so we mark them as known,
+# server-only values. SUPABASE_URL is public anyway (it appears in photo URLs).
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL,SUPABASE_SERVICE_ROLE_KEY,ADMIN_PASSWORD"
