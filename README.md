@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Designer's Shoppe
 
-## Getting Started
+A simple inventory / showroom site. Browse pieces by category; every item links to
+**Message on Facebook** (no phone number on the site). Inventory is managed from a
+private, phone-friendly `/add` page.
 
-First, run the development server:
+## Run it locally
 
 ```bash
+npm install      # first time only
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open **http://localhost:3000**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Public site:** `/`
+- **Manage / upload:** `/add` (password from `.env.local`, default `shoppe`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding inventory (the /add page)
 
-## Learn More
+Made for a phone. Save `yoursite.com/add` to the home screen and it opens like an app.
+Tap the photo box → take a photo or pick from the library → title → category → optional
+note → **Publish**. The manage list below lets you **Mark sold / available** or **Delete**.
 
-To learn more about Next.js, take a look at the following resources:
+## Things to set before launch
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Logo** — drop the real logo file in as `public/logo.png`. It replaces the text
+   wordmark automatically.
+2. **Facebook Page** — in `lib/config.ts`, set `facebookPage` to the business Page's
+   username (e.g. `facebook.com/DesignersShoppe` → `"DesignersShoppe"`). This powers every
+   "Message on Facebook" button via `m.me/<username>`.
+3. **Password** — change `ADMIN_PASSWORD` in `.env.local` to something private.
+4. **Categories** — edit the `categories` list in `lib/config.ts` anytime.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## How it's built
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js (App Router)** + Tailwind.
+- Inventory currently lives in `data/items.json`; photos in `public/uploads/`.
+  This is the **local/pre-launch** setup so everything works with zero external accounts.
+- At launch we swap `lib/store.ts` over to **Supabase** (database + photo storage) so it
+  works on a real host (Vercel). Nothing else in the app needs to change — every page and
+  the upload form only talk to the functions in `lib/store.ts`.

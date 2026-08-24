@@ -1,0 +1,68 @@
+[
+  {
+    "id": "seed-lamp",
+    "title": "Brass Table Lamp",
+    "category": "Lamps",
+    "note": "Vintage solid-brass lamp with pleated cream shade. ~26\" tall. Rewired and in excellent working condition.",
+    "images": [
+      "/uploads/lamp.svg"
+    ],
+    "sold": false,
+    "createdAt": 1000006
+  },
+  {
+    "id": "seed-mirror",
+    "title": "Gilt Wall Mirror",
+    "category": "Mirrors",
+    "note": "Ornate gold-leaf frame, beveled glass. Approx. 34\" x 44\". A statement piece for an entryway.",
+    "images": [
+      "/uploads/mirror.svg"
+    ],
+    "sold": false,
+    "createdAt": 1000005
+  },
+  {
+    "id": "seed-art",
+    "title": "Framed Landscape",
+    "category": "Art & Pictures",
+    "note": "Original oil landscape in a carved wood frame. Signed. 28\" x 22\".",
+    "images": [
+      "/uploads/art.svg"
+    ],
+    "sold": true,
+    "createdAt": 1000004
+  },
+  {
+    "id": "seed-chair",
+    "title": "Wingback Chair",
+    "category": "Furniture",
+    "note": "Classic wingback in a neutral linen. Sturdy frame, clean upholstery. Very comfortable.",
+    "images": [
+      "/uploads/chair.svg"
+    ],
+    "sold": false,
+    "createdAt": 1000003
+  },
+  {
+    "id": "seed-vase",
+    "title": "Porcelain Vase",
+    "category": "Décor",
+    "note": "Hand-painted porcelain vase, blue and white. No chips or cracks.",
+    "images": [
+      "/uploads/vase.svg"
+    ],
+    "sold": false,
+    "createdAt": 1000002
+  },
+  {
+    "id": "seed-clock",
+    "title": "Mantel Clock",
+    "category": "Décor",
+    "note": "Wind-up mantel clock with a warm walnut case. Keeps good time.",
+    "images": [
+      "/uploads/clock.svg"
+    ],
+    "sold": false,
+    "createdAt": 1000001
+  }
+]
