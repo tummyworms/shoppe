@@ -17,13 +17,21 @@ const playfair = Playfair_Display({
   weight: ["500", "600", "700", "800"],
 });
 
+const siteUrl = process.env.URL ?? "https://thedesignershoppe.store";
+const description = `${config.shopName}: ${config.tagline}. Browse our collection and message us on Facebook for pricing, shipping, or to arrange a visit.`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${config.shopName} — ${config.tagline}`,
     template: `%s · ${config.shopName}`,
   },
-  description: `${config.shopName}: ${config.tagline}. Browse our collection and message us on Facebook for pricing, shipping, or to arrange a visit.`,
+  description,
+  openGraph: {
+    title: config.shopName,
+    siteName: config.shopName,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
