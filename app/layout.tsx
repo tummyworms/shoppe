@@ -18,6 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
   title: {
     default: `${config.shopName} — ${config.tagline}`,
     template: `%s · ${config.shopName}`,
