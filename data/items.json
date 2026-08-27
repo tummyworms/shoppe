@@ -1,68 +1,122 @@
 [
   {
-    "id": "seed-lamp",
-    "title": "Brass Table Lamp",
-    "category": "Lamps",
-    "note": "Vintage solid-brass lamp with pleated cream shade. ~26\" tall. Rewired and in excellent working condition.",
-    "images": [
-      "/uploads/lamp.svg"
-    ],
+    "id": "seed-console",
+    "title": "Italian Marble Console",
+    "category": "Furniture",
+    "price": "890",
+    "note": "Honed carrara top on a gilt iron base, c. 1930. Original patina to the gilding, no chips or repairs to the marble.\n48\" w × 16\" d × 32\" h.",
+    "images": [],
     "sold": false,
-    "createdAt": 1000006
+    "createdAt": 1756137600000
   },
   {
     "id": "seed-mirror",
     "title": "Gilt Wall Mirror",
     "category": "Mirrors",
-    "note": "Ornate gold-leaf frame, beveled glass. Approx. 34\" x 44\". A statement piece for an entryway.",
-    "images": [
-      "/uploads/mirror.svg"
-    ],
+    "price": "380",
+    "note": "Ornate gold-leaf frame, beveled glass. Approx. 34\" × 44\". A statement piece for an entryway.",
+    "images": [],
     "sold": false,
-    "createdAt": 1000005
+    "createdAt": 1756051200000
   },
   {
-    "id": "seed-art",
+    "id": "seed-lamp",
+    "title": "Brass Table Lamp",
+    "category": "Lamps",
+    "price": "145",
+    "note": "Vintage solid-brass lamp with pleated cream shade, ~26\" tall. Rewired and in excellent working condition.",
+    "images": [],
+    "sold": false,
+    "createdAt": 1755964800000
+  },
+  {
+    "id": "seed-landscape",
     "title": "Framed Landscape",
     "category": "Art & Pictures",
-    "note": "Original oil landscape in a carved wood frame. Signed. 28\" x 22\".",
-    "images": [
-      "/uploads/art.svg"
-    ],
+    "price": "",
+    "note": "Original oil landscape in a carved wood frame. Signed. 28\" × 22\".",
+    "images": [],
     "sold": true,
-    "createdAt": 1000004
+    "createdAt": 1755446400000
   },
   {
-    "id": "seed-chair",
+    "id": "seed-wingback",
     "title": "Wingback Chair",
     "category": "Furniture",
+    "price": "425",
     "note": "Classic wingback in a neutral linen. Sturdy frame, clean upholstery. Very comfortable.",
-    "images": [
-      "/uploads/chair.svg"
-    ],
+    "images": [],
     "sold": false,
-    "createdAt": 1000003
+    "createdAt": 1755273600000
+  },
+  {
+    "id": "seed-sconces",
+    "title": "Pair of Sconces",
+    "category": "Lamps",
+    "price": "210",
+    "note": "Brass candle sconces, electrified. Sold as a pair.",
+    "images": [],
+    "sold": false,
+    "createdAt": 1754928000000
   },
   {
     "id": "seed-vase",
     "title": "Porcelain Vase",
     "category": "Décor",
+    "price": "60",
     "note": "Hand-painted porcelain vase, blue and white. No chips or cracks.",
-    "images": [
-      "/uploads/vase.svg"
-    ],
+    "images": [],
     "sold": false,
-    "createdAt": 1000002
+    "createdAt": 1754668800000
+  },
+  {
+    "id": "seed-chinoiserie",
+    "title": "Chinoiserie Panel",
+    "category": "Art & Pictures",
+    "price": "340",
+    "note": "Hand-painted panel on silk, framed under glass. 30\" × 40\".",
+    "images": [],
+    "sold": false,
+    "createdAt": 1754409600000
+  },
+  {
+    "id": "seed-venetian",
+    "title": "Venetian Mirror",
+    "category": "Mirrors",
+    "price": "",
+    "note": "Etched Venetian glass with floral crest. Small period losses to the edging.",
+    "images": [],
+    "sold": true,
+    "createdAt": 1753891200000
   },
   {
     "id": "seed-clock",
     "title": "Mantel Clock",
     "category": "Décor",
+    "price": "110",
     "note": "Wind-up mantel clock with a warm walnut case. Keeps good time.",
-    "images": [
-      "/uploads/clock.svg"
-    ],
+    "images": [],
     "sold": false,
-    "createdAt": 1000001
+    "createdAt": 1753632000000
+  },
+  {
+    "id": "seed-slipper",
+    "title": "Slipper Chairs, Pair",
+    "category": "Furniture",
+    "price": "560",
+    "note": "Pair of slipper chairs in a soft moss velvet. Reupholstered.",
+    "images": [],
+    "sold": false,
+    "createdAt": 1753200000000
+  },
+  {
+    "id": "seed-tole",
+    "title": "Tole Tray",
+    "category": "Décor",
+    "price": "75",
+    "note": "Hand-painted tole tray, black ground with gilt border. 22\" wide.",
+    "images": [],
+    "sold": false,
+    "createdAt": 1752681600000
   }
 ]

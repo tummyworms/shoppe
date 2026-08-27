@@ -12,6 +12,9 @@ create table if not exists public.items (
   created_at timestamptz not null default now()
 );
 
+-- Optional price shown on the shop (free text, e.g. "145"). Safe to re-run.
+alter table public.items add column if not exists price text;
+
 -- Lock the table down: only the server (service role key) can touch it.
 alter table public.items enable row level security;
 

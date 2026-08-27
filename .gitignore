@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# claude design handoff bundle (local reference only)
+/design
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
