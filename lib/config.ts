@@ -9,7 +9,7 @@ export const config = {
   facebookPage: "designersshoppe",
 
   // Categories shown as filters and in the upload dropdown. Edit freely.
-  categories: ["Lamps", "Mirrors", "Art & Pictures", "Furniture", "Décor"],
+  categories: ["Lamps", "Mirrors", "Art & Pictures", "Furniture", "Accents"],
 } as const;
 
 export type Category = (typeof config.categories)[number];

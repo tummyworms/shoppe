@@ -18,6 +18,7 @@ export async function POST(req: Request) {
   const title = (form.get("title") as string)?.trim();
   const category = (form.get("category") as string)?.trim();
   const price = ((form.get("price") as string) || "").trim();
+  const sku = ((form.get("sku") as string) || "").trim();
   const note = ((form.get("note") as string) || "").trim();
   if (!title || !category) {
     return NextResponse.json({ error: "Title and category are required" }, { status: 400 });
@@ -34,6 +35,7 @@ export async function POST(req: Request) {
     title,
     category,
     price: price || undefined,
+    sku: sku || undefined,
     note: note || undefined,
     images,
     sold: false,

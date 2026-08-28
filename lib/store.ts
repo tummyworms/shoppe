@@ -84,6 +84,7 @@ type Row = {
   title: string;
   category: string;
   price?: string | null;
+  sku?: string | null;
   note: string | null;
   images: string[] | null;
   sold: boolean;
@@ -96,6 +97,7 @@ function rowToItem(r: Row): Item {
     title: r.title,
     category: r.category,
     price: r.price ?? undefined,
+    sku: r.sku ?? undefined,
     note: r.note ?? undefined,
     images: r.images ?? [],
     sold: r.sold,
@@ -128,12 +130,12 @@ async function sbAddItem(item: Item): Promise<void> {
     sold: item.sold,
     created_at: new Date(item.createdAt).toISOString(),
   };
-  // Include price when set. If the price column hasn't been added to the table
-  // yet, retry without it so item creation still succeeds.
+  // Include optional columns when set. If a column hasn't been added to the
+  // table yet, retry without them so item creation still succeeds.
   let { error } = await supabase()
     .from(TABLE)
-    .insert({ ...base, price: item.price ?? null });
-  if (error && /price/i.test(error.message)) {
+    .insert({ ...base, price: item.price ?? null, sku: item.sku ?? null });
+  if (error && /(price|sku)/i.test(error.message)) {
     ({ error } = await supabase().from(TABLE).insert(base));
   }
   if (error) throw error;

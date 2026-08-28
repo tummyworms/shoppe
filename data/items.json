@@ -62,7 +62,7 @@
   {
     "id": "seed-vase",
     "title": "Porcelain Vase",
-    "category": "Décor",
+    "category": "Accents",
     "price": "60",
     "note": "Hand-painted porcelain vase, blue and white. No chips or cracks.",
     "images": [],
@@ -92,7 +92,7 @@
   {
     "id": "seed-clock",
     "title": "Mantel Clock",
-    "category": "Décor",
+    "category": "Accents",
     "price": "110",
     "note": "Wind-up mantel clock with a warm walnut case. Keeps good time.",
     "images": [],
@@ -112,7 +112,7 @@
   {
     "id": "seed-tole",
     "title": "Tole Tray",
-    "category": "Décor",
+    "category": "Accents",
     "price": "75",
     "note": "Hand-painted tole tray, black ground with gilt border. 22\" wide.",
     "images": [],

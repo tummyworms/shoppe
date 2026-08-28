@@ -13,7 +13,8 @@ const geistSans = Geist({
 const playfair = Playfair_Display({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 const siteUrl = process.env.URL ?? "https://thedesignershoppe.store";

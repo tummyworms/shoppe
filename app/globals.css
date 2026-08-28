@@ -1,26 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfcf9;
-  --foreground: #1a1a1a;
   --font-display-stack: var(--font-display), Georgia, "Times New Roman", serif;
 }
 
 body {
   margin: 0;
-  background: var(--background);
-  color: var(--foreground);
+  background: #e9e4d9;
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: #1a1a1a;
   text-decoration: none;
   cursor: pointer;
-}
-a:hover {
-  color: #6b6459;
 }
 
 input,
@@ -29,7 +22,6 @@ textarea,
 button {
   font-family: inherit;
   font-size: 14px;
-  color: #1a1a1a;
 }
 
 @keyframes rise {
@@ -42,59 +34,19 @@ button {
     transform: translateY(0);
   }
 }
-
-/* Layout shell + responsive grids */
-.shell {
-  display: grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  min-height: 100vh;
-}
-.shop-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.detail-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 48px;
-  align-items: start;
-}
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-}
-.admin-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 340px;
-  align-items: start;
-}
-.hoverable:hover {
-  background: #f7f4ee;
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-@media (max-width: 1100px) {
-  .shop-grid,
-  .related-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+/* Tile hover-zoom */
+.tile img {
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.3, 1);
 }
-@media (max-width: 900px) {
-  .shell {
-    grid-template-columns: 1fr;
-  }
-  .sidebar {
-    border-right: 0 !important;
-  }
-  .detail-grid,
-  .admin-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-}
-@media (max-width: 640px) {
-  .shop-grid,
-  .related-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.tile:hover img {
+  transform: scale(1.045);
 }
