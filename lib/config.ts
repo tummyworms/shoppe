@@ -3,10 +3,11 @@ export const config = {
   shopName: "Designer's Shoppe",
   tagline: "By Nancy LoAlbo",
 
-  // Facebook Page username for the "Message on Facebook" buttons.
-  // e.g. if the page is facebook.com/DesignersShoppe -> use "DesignersShoppe".
-  // TODO: replace this placeholder once the business Facebook Page exists.
-  facebookPage: "designersshoppe",
+  // Facebook Page identifier for the "Message on Facebook" buttons.
+  // Can be a username (facebook.com/DesignersShoppe -> "DesignersShoppe")
+  // or a numeric profile/page id. m.me supports both.
+  // Points to facebook.com/profile.php?id=61594905849840
+  facebookPage: "61594905849840",
 
   // Categories shown as filters and in the upload dropdown. Edit freely.
   categories: ["Lamps", "Mirrors", "Art & Pictures", "Furniture", "Accents"],
